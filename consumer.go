@@ -15,6 +15,7 @@ func Consumer() {
 		go worker(context.Background(), globalQueue.Ch, &wg)
 	}
 	wg.Wait()
+
 }
 
 func worker(ctx context.Context, ch chan interface{}, wg *sync.WaitGroup) {
